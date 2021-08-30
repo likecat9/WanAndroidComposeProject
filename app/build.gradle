@@ -1,0 +1,59 @@
+import com.biabiabia.wanandroid.buildsrc.Dependencies
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.biabiabia.wanandroidcomposeproject"
+        minSdk 21
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':lib_base')
+
+    testImplementation Dependencies.Junit.junit_junit
+    androidTestImplementation Dependencies.AndroidX.androidx_test_ext_junit
+    androidTestImplementation Dependencies.AndroidX.androidx_test_espresso_espresso_core
+    androidTestImplementation Dependencies.AndroidX.androidx_compose_ui_eui_tst_junit4
+    debugImplementation Dependencies.AndroidX.androidx_compose_ui_ui_tooling
+
+}
