@@ -52,9 +52,9 @@ dependencies {
     implementation project(path: ':lib_base')
 
     testImplementation Deps.Junit.junit_junit
-    androidTestImplementation Deps.AndroidX.androidx_test_ext_junit
-    androidTestImplementation Deps.AndroidX.androidx_test_espresso_espresso_core
-    androidTestImplementation Deps.AndroidX.androidx_compose_ui_eui_tst_junit4
+    androidTestImplementation Deps.Test.androidx_test_ext_junit
+    androidTestImplementation Deps.Test.androidx_test_espresso_espresso_core
+    androidTestImplementation Deps.Test.androidx_compose_ui_eui_tst_junit4
     debugImplementation Deps.AndroidX.androidx_compose_ui_ui_tooling
 
 }
