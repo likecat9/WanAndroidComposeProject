@@ -1,8 +1,9 @@
-import com.biabiabia.wanandroid.buildsrc.Dependencies
+import com.biabiabia.wanandroid.version_and_plugin.Deps
 
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.biabiabia.wanandroid.version_and_plugin'
 }
 
 android {
@@ -50,10 +51,10 @@ android {
 dependencies {
     implementation project(path: ':lib_base')
 
-    testImplementation Dependencies.Junit.junit_junit
-    androidTestImplementation Dependencies.AndroidX.androidx_test_ext_junit
-    androidTestImplementation Dependencies.AndroidX.androidx_test_espresso_espresso_core
-    androidTestImplementation Dependencies.AndroidX.androidx_compose_ui_eui_tst_junit4
-    debugImplementation Dependencies.AndroidX.androidx_compose_ui_ui_tooling
+    testImplementation Deps.Junit.junit_junit
+    androidTestImplementation Deps.AndroidX.androidx_test_ext_junit
+    androidTestImplementation Deps.AndroidX.androidx_test_espresso_espresso_core
+    androidTestImplementation Deps.AndroidX.androidx_compose_ui_eui_tst_junit4
+    debugImplementation Deps.AndroidX.androidx_compose_ui_ui_tooling
 
 }

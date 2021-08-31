@@ -1,8 +1,9 @@
-import com.biabiabia.wanandroid.buildsrc.Dependencies
+import com.biabiabia.wanandroid.version_and_plugin.Deps
 
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.biabiabia.wanandroid.version_and_plugin'
 }
 
 android {
@@ -35,14 +36,14 @@ dependencies {
     /**
      * AndroidX
      */
-    api Dependencies.AndroidX.androidx_core_core_ktx
-    api Dependencies.AndroidX.androidx_compose_ui_ui
-    api Dependencies.AndroidX.androidx_compose_material_material
-    api Dependencies.AndroidX.androidx_compose_ui_ui_tooling_preview
-    api Dependencies.AndroidX.androidx_lifecycle_lifecycle_runtime_ktx
-    api Dependencies.AndroidX.androidx_activity_activity_compose
+    api Deps.AndroidX.androidx_core_core_ktx
+    api Deps.AndroidX.androidx_compose_ui_ui
+    api Deps.AndroidX.androidx_compose_material_material
+    api Deps.AndroidX.androidx_compose_ui_ui_tooling_preview
+    api Deps.AndroidX.androidx_lifecycle_lifecycle_runtime_ktx
+    api Deps.AndroidX.androidx_activity_activity_compose
 
-    testImplementation Dependencies.Junit.junit_junit
-    androidTestImplementation Dependencies.AndroidX.androidx_test_ext_junit
-    androidTestImplementation Dependencies.AndroidX.androidx_test_espresso_espresso_core
+    testImplementation Deps.Junit.junit_junit
+    androidTestImplementation Deps.AndroidX.androidx_test_ext_junit
+    androidTestImplementation Deps.AndroidX.androidx_test_espresso_espresso_core
 }
